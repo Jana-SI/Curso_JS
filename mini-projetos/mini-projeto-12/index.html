@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                /* width: 550px; */
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 12<br>Encontre a igualdade</h1>
+            
+            <xmp>
+                class Endereco {
+                    constructor(rua, cidade, cep) {
+                        this.rua = rua;
+                        this.cidade = cidade;
+                        this.cep = cep;
+                    }
+                }
+                
+                const endereco1 = new Endereco('avenida uruguai', 'Rio Grande', '96212-194');
+                
+                const endereco2 = new Endereco('pero vaz de caminha', 'Rio Grande', ' 96202-620');
+            </xmp>
+
+            <p>Minhas funções</p>
+            <xmp>    
+                function saoIguais(endereco1, endereco2){
+                    for(let chave1 in endereco1){
+                        for(let chave2 in endereco2){
+                            if(endereco1[chave1] === endereco2[chave2]){
+                                console.log(endereco1[chave1],"==",endereco2[chave2],true);
+                            }
+                        }
+                    }
+                }
+                
+                saoIguais(endereco1, endereco2);
+                
+                function memoriaIguais(endereco1, endereco2){
+                    for(let chave1 in endereco1){
+                        for(let chave2 in endereco2){
+                            if(chave1 === chave2){
+                                console.log(chave1,"==",chave2,true);
+                            }
+                        }
+                    }
+                }
+                
+                memoriaIguais(endereco1, endereco2);
+            </xmp>
+            
+            <p>Resposta do video</p>
+            <xmp>
+                function saoIguaisV(endereco1, endereco2){
+                    return endereco1.rua === endereco2.rua &&
+                            endereco1.cidade === endereco2.cidade &&
+                            endereco1.cep === endereco2.cep;
+                }
+                    
+                console.log(saoIguaisV(endereco1, endereco2));
+                
+                function memoriaIguaisV(endereco1, endereco2){
+                    return endereco1 === endereco2;
+                }
+                
+                console.log(memoriaIguaisV(endereco1, endereco2));
+            </xmp>
+        </div>
+    </body>
+</html>

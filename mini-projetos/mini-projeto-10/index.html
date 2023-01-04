@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 10</h1>
+            <p><strong>Números Primos</strong><br><br>
+                Criar função para mostrar os números primos</p>
+            <xmp>
+                exibirNumerosPrimos(15);
+                
+                function exibirNumerosPrimos(limite) {
+                
+                    let i;
+                
+                    for(i = 2; i < limite; i++){
+                
+                        if(numeroPrimo(i)) console.log(i);
+                        
+                    }
+                }
+                
+                function numeroPrimo(numero){
+                
+                    let j;
+                
+                    for(j = 2; j < numero; j++){
+                
+                        if(numero % j === 0){
+                
+                           return false;
+                
+                        }
+                    }
+                
+                    return true;
+                }
+            </xmp>           
+        </div>
+    </body>
+</html>

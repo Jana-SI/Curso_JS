@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 02</h1>
+            <p>Máximo Entre Dois Valores<br>
+                Escreva uma função que usa 2 numeros e retorna o maior entre eles</p>
+            <xmp>
+                function maior(n1, n2) {
+                    if(n1 > n2){
+                        return n1;
+                    }else{
+                        return n2;
+                    }
+                } 
+
+                function maior(n1, n2) {
+                    if(n1 > n2){
+                        return n1;
+                    }
+                    return n2;
+                }
+
+                function maior(n1, n2) {
+                    
+                    return n1 > n2 ? n1 : n2;
+                }
+
+                let n1 = 10;
+                let n2 = 5;
+
+                r = maior(n1, n2);
+
+                console.log('N1:', n1, 'N2:', n2, 'Maior:', r);
+            </xmp>           
+        </div>
+    </body>
+</html>

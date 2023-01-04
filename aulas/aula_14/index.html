@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Dev Aprender<br></h1>
+            
+            <p>Factory Functions - Função de Fábrica</p>
+            <xmp>
+    function criarCelular(marcaCelular, tamanhoTela, capacidadeBateria) {
+        return {
+            marcaCelular,
+            tamanhoTela,
+            capacidadeBateria,
+            ligar(){
+                console.log("Fazendo ligação")
+            }
+        }
+    }
+    
+    const celular1 = criarCelular('Zenfone', 5.5, 5000);
+    console.log(celular1);
+    const celular2 = criarCelular('ASUS', 155.75, 5000);
+    console.log(celular2);
+            </xmp>
+        </div>
+    </body>
+</html>

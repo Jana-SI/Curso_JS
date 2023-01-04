@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1, h2{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+            fieldset, input, button{
+                background-color: #2e2e4f;
+                border: 3px solid #995792;
+                color:#f49ddb;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 1<br>Segurança Virtual</h1>
+            <fieldset>
+                <h2>Festa VIP</h2>
+            
+                <h3>Bem vindo a festa senhor(a):
+                    <input type="text" id="nome" placeholder="digite seu nome">
+                </h3>
+                
+                <h3>
+                    Quem te convidou para essa festa?
+                    <input type="text" id="convidou" placeholder="quem te convidou?">     
+                    <button onclick="verificar()">verificar se posso entrar</button>
+                </h3>
+
+                <h3>
+                    Você está permitido a entrar?
+                    <label fpr="" id="permissao">Pesquisando...</label>
+                </h3>
+            </fieldset>
+        </div>
+    </body>
+</html>

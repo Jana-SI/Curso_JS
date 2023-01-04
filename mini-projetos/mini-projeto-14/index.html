@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                /* width: 550px; */
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 14<br>Faixa de Preço</h1>        
+            <p>primeira opção</p>
+            <xmp>
+                let FaixaPreco = [
+                    {tooltip: 'até R$ 700', minimo: 0, maximo: 700},
+                    {tooltip: 'de R$ 700 a R$ 1000', minimo: 700, maximo: 1000},
+                    {tooltip: 'de R$ 1000 ou mais', minimo: 1000, maximo: 9999999}
+                ];
+                
+                console.log(FaixaPreco);
+            </xmp>
+            <p>Segunda opção</p>
+            <xmp>
+                function criaFaixaPreco(tooltip, minimo, maximo){
+                    return{
+                        tooltip, minimo, maximo
+                    }
+                }
+                
+                let FaixaPreco2 = [
+                    criaFaixaPreco('até R$ 700', 0, 700),
+                    criaFaixaPreco('de R$ 700 a R$ 1000', 700, 1000),
+                    criaFaixaPreco('de R$ 1000 ou mais', 1000, 9999999)
+                ]
+                
+                console.log(FaixaPreco2);
+            </xmp>
+            <p>Terceira opção</p>
+            <xmp> 
+                function fP3(tooltip, minimo, maximo){
+                    this.tooltip = tooltip,
+                    this.minimo = minimo,
+                    this.maximo = maximo
+                }
+                
+                let FaixaPreco3 = [
+                    new fP3('até R$ 700', 0, 700),
+                    new fP3('de R$ 700 a R$ 1000', 700, 1000),
+                    new fP3('de R$ 1000 ou mais', 1000, 9999999)
+                ]
+                
+                console.log(FaixaPreco3);
+            </xmp>
+        </div>
+    </body>
+</html>

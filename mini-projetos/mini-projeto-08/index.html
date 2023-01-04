@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 08</h1>
+            <p><strong>Média de Nota Escolar</strong><br><br>
+                Obter a média a partir de um array<br><br>
+                
+                0 - 59: F<br>
+                60 - 69: D<br>
+                70 - 79: C<br>
+                80 - 89: B<br>
+                90 - 100: A</p>
+            <xmp>                
+                const array = [70, 70, 80];
+                
+                console.log(mediaDoAluno(array));
+                
+                function mediaDoAluno(notas) {
+                
+                    const media = calcularMedia(notas);
+                    
+                    if(media < 59) return 'F';
+                
+                    else if(media < 69) return 'D';
+                
+                    else if(media < 79) return 'C';
+                        
+                    else if(media < 89) return 'B';
+                        
+                    else return 'C';
+                }
+                
+                function calcularMedia(array) {
+                    let soma = 0, valor;
+                
+                    for(valor of array){
+                        soma += valor;
+                    }
+                
+                    return soma / (array.length);
+                }
+            </xmp>           
+        </div>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="aula_08.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Dev Aprender - Functions</h1>
+        
+            <xmp>
+                let corSite = "azul";
+
+                function resetaCor (){
+                    corSite = "";
+                };
+                
+                resetaCor();
+            </xmp>
+            <xmp>
+                function resetaCor1 (cor){
+                    corSite = cor;
+                };
+
+                resetaCor1("vermelho");
+            </xmp>
+            <xmp>
+                function resetaCor2 (cor, tonalidade){
+                    corSite = cor + " " + tonalidade;
+                };
+
+                resetaCor2("verde", "claro");
+            </xmp>
+        </div>
+    </body>
+</html>

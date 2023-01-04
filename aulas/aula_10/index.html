@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="aula_10.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Dev Aprender - Operadores</h1>
+            
+            <p>Operadores aritiméticos (+ - * / **)</p>
+            <xmp>
+                let salario = 100;
+                let soma = salario + salario;
+                let sub = salario - salario;
+                let mult = salario * salario;
+                let div = salario / salario;
+                let expo = 5 ** 5;
+
+                console.log(soma, sub, mult, div, expo);
+            </xmp>
+
+            <p>Operadores de incremento e decremento</p>
+            <xmp>
+                let idade = 18;
+
+                console.log(idade--, --idade, idade++, ++idade, idade);
+            </xmp>
+
+            <p>Operadores atribuição</p>
+            <xmp>
+                let valor = 100;
+
+                valor += valor;
+                console.log(valor);
+
+                valor -= valor;
+                console.log(valor);
+            </xmp>
+
+            <p>Operadores de comparação <br>
+                igualdade estrita (===) , igualdade solta (==)
+            </p>
+            <xmp>
+                console.log(1 === 1);    |   console.log(1 == 1);
+                console.log('1' === 1);  |   console.log('1' == 1);                
+            </xmp>
+
+            <p>Operadores logicos<br>
+            e (&&) retorna true se os dois operandos forem true<br>
+            ou (||) retorna true se um dos operandos forem true<br>
+            not (!) </p>
+            <xmp>
+                let maiorIdade = false;
+                let posssuiCT = false;
+                let podeAplicar = maiorIdade || posssuiCT;
+
+                console.log('pode aplicar: ', podeAplicar);
+
+                let candidatoRecusado = !podeAplicar;
+                console.log('Candidato Recusado: ', candidatoRecusado);
+            </xmp>
+            <p>Operadores bitwise - Comparações não boleanas<br>
+
+                Falsy, são undefined, null, 0, false, '', NaN - not a number<br>
+                Truthy
+            </p>
+            <xmp>
+                let corPersonalizada = 'Vermelho';
+                let corPadrão = 'Azul';
+                let corPerfil = corPersonalizada || corPadrão;
+                
+                console.log('Cor Personalizada: ', corPersonalizada);
+                console.log('Cor Padrão: ', corPadrão);
+                console.log('Cor Perfil: ', corPerfil);                
+            </xmp>            
+        </div>
+    </body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Dev Aprender<br>Laço / Loop</h1>
+            
+            <p>for</p>
+            <xmp>
+                let i;
+
+                for(i = 0; i < 5; i++){
+                    console.log(i,'Estou aprendendo!');
+                }
+
+                for(i = 1; i <= 5; i++){
+                    if(i % 2 !== 0){
+                        console.log(i);
+                    }
+                }
+                
+                for(i = 5; i >= 1; i--){
+                    if(i % 2 !== 0){
+                        console.log(i);
+                    }
+                }
+            </xmp>
+
+            <p>while</p>
+            <xmp>
+                let i = 5;
+
+                while(i >= 1){
+
+                    if(i % 2 !== 0){
+                        console.log(i);
+                    }
+
+                    i--;
+
+                }
+            </xmp>
+
+            <p>do .. while</p>
+            <xmp>
+                let i = 0;
+
+                do{
+                    console.log(i, 'digitando!');
+                    i++;
+                }while(i < 10);
+            </xmp>
+
+            <p>for .. in</p>
+            <xmp>
+                const pessoa = {
+                    nome: 'Janaina',
+                    idade: 29
+                };
+                
+                // key - value
+                for(let chave in pessoa){
+                    console.log(chave, pessoa[chave]);
+                }
+                
+                const cores = ['Vermelho', 'Azul', 'Verde'];
+                
+                for(let indice in cores){
+                    console.log(indice, cores[indice])
+                }
+            </xmp>
+
+            <p>for .. of</p>
+            <xmp>
+                for(let cor of cores){
+                    console.log(cor);
+                }
+            </xmp>
+        </div>
+    </body>
+</html>

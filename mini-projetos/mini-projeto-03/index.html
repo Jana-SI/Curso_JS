@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Curso Javascript</title>
+        <script src="scripts.js"></script>
+        <style>
+            div::before {
+                padding: 5px;
+                display: block;
+                position: relative;
+                top: -10px;
+                left: -10px;
+                width: 560px;
+            }
+            div {
+                margin: 100px auto 100px auto;
+                padding: 10px;
+                width: 550px;
+                min-height:300px;
+                border: 3px solid #995792;
+            }
+            body{
+                background-color: #2e2e4f;
+                color:#f49ddb;
+            }
+            h1{                
+                text-align: center;
+                color: #5b416b;
+                text-shadow: 1px 1px 1px #ef7abc;
+            }
+            p{
+                margin-bottom: 0px;
+                text-align: center;
+                border: 3px solid #995792;
+                padding: 10px;
+            }
+            xmp{
+                margin-top: 0px;
+                border-top: 0px;
+                border: 3px solid #995792;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Mini Projeto 03</h1>
+            <p>FizzBuzz<br>
+                Divisivel por 3 => Fizz<br>
+                Divisivel por 5 => Buzz<br>
+                Divisivel por 3 e 5 => FizzBuzz<br>
+                Não divivel por 3 ou 5 => entrada<br>
+                Não é um número => nao é um némero</p>
+            <xmp>
+                const resultado = fizzBuzz(11);
+                console.log(resultado);
+
+                function fizzBuzz(entrada) {
+
+                    if(typeof entrada !== 'number'){
+                        return 'Não é um numero';
+                    }else if((entrada % 3 === 0) && (entrada % 5 === 0)){
+                        return 'FizzBuzz';
+                    }else if(entrada % 3 === 0){
+                        return 'Fizz';
+                    }else if(entrada % 5 === 0){
+                        return 'Buzz';
+                    }
+                    
+                    return entrada;
+                }
+            </xmp>           
+        </div>
+    </body>
+</html>
